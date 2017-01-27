@@ -2050,10 +2050,10 @@ export function performEmojiUnescape(string, opts) {
       const url = buildEmojiUrl(emojiVal, opts);
       const classes = isCustomEmoji(emojiVal, opts) ? "emoji emoji-custom" : "emoji";
 
-      if(isCustomEmoji(code, opts)){
-                return ['a', {href: '//lmss.vn/wiki/' + code}, '<img src=\"' + url + '" title=\":' + code + ':\" class=\"' + classes +'\" alt=\":' + code +':\">' + " " + championName[code]];
+      if(isCustomEmoji(emojiVal, opts)){
+                return ['a', {href: '//lmss.vn/wiki/' + emojiVal}, '<img src=\"' + url + '" title=\":' + emojiVal + ':\" class=\"' + classes +'\" alt=\":' + emojiVal +':\">' + " " + championName[emojiVal]];
             }else{
-                return ['img', { href: url, title, 'class': classes, alt: title }];
+                return ['img', { href: url, title, 'class': classes, alt: emojiVal }];
             }
 
     });
