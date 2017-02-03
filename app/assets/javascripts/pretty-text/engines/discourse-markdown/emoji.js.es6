@@ -2057,11 +2057,9 @@ export function setup(helper) {
             const title = `:${code}:`;
             const classes = isCustomEmoji(code, opts) ? "emoji emoji-custom" : "emoji";
 
-            if(isCustomEmoji(code, opts)){
-                return ['a', {href: '//lmss.vn/wiki/' + code}, '<img src=\"' + url + '" title=\":' + code + ':\" class=\"' + classes +'\" alt=\":' + code +':\">' + " " + championName[code]];
-            }else{
+            
                 return ['img', { href: url, title, 'class': classes, alt: title }];
-            }
+            
         }
     }
 
